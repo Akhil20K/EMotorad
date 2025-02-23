@@ -22,7 +22,7 @@ const LoginSignup = () => {
   function handleSubmit(event){
     event.preventDefault();
     if(action === "Login"){
-      axios.post('http://localhost:8000/login', {email: data.email, password: data.password})
+      axios.post('https://emotorad-0edi.onrender.com/login', {email: data.email, password: data.password})
         .then(res => {
           console.log(res.data);
           navigate("/dashboard");
@@ -40,7 +40,7 @@ const LoginSignup = () => {
         });
     }
     else{
-      axios.post('http://localhost:8000/register', {email: data.email, password: data.password, username: data.username})
+      axios.post('https://emotorad-0edi.onrender.com/register', {email: data.email, password: data.password, username: data.username})
         .then(res => {
           console.log(res.data);
           alert("Registration Successful!");
