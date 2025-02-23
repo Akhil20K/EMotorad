@@ -7,10 +7,7 @@ const errorHandler = require("./middlewares/errorHandlerMiddleware.js");
 const app = express();
 
 // CORS middleware to allow cross-origin requests
-app.use(cors({
-    origin: 'http://localhost:3000',
-    credentials: true,
-}));
+app.use(cors());
 app.use(express.json());
 // Redirecting to the Router middleware
 app.use('/', userRouter);
